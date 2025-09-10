@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do App</title>
+  <title>Stylish To-Do App</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-400 flex items-center justify-center">
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1650&q=80');">
 
   <div class="bg-white bg-opacity-90 backdrop-blur-lg shadow-2xl rounded-2xl w-full max-w-lg p-8">
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">My To-Do List</h1>
@@ -26,12 +26,12 @@
     </div>
 
     <!-- To-Do List -->
-    <ul id="todoList" class="space-y-2"></ul>
+    <ul id="todoList" class="space-y-2 max-h-64 overflow-y-auto"></ul>
 
     <!-- Clear Completed -->
     <button id="clearCompleted" class="mt-4 w-full bg-red-500 text-white py-2 rounded-xl hover:bg-red-600 transition">Clear Completed</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -40,9 +40,7 @@ function renderTasks(filter = 'all') {
         draggedIndex = null;
         li.classList.remove('dragging');
       });
-      li.addEventListener('dragover', e => {
-        e.preventDefault();
-      });
+      li.addEventListener('dragover', e => e.preventDefault());
       li.addEventListener('drop', () => {
         if (draggedIndex !== null && draggedIndex !== index) {
           const [draggedTask] = tasks.splice(draggedIndex, 1);
@@ -72,12 +70,12 @@ addBtn.addEventListener('click', () => {
   }
 });
 
-// Add task on Enter
+// Enter key to add task
 taskInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') addBtn.click();
 });
 
-// Toggle complete, delete, edit
+// Toggle complete / delete / edit
 todoList.addEventListener('click', (e) => {
   const index = e.target.dataset.index;
   if (e.target.classList.contains('task-checkbox')) {
@@ -109,7 +107,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Clear completed
+// Clear completed tasks
 clearCompleted.addEventListener('click', () => {
   tasks = tasks.filter(task => !task.completed);
   saveTasks();
