@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-400 flex items-center justify-center">
+
+  <div class="bg-white bg-opacity-90 backdrop-blur-lg shadow-2xl rounded-2xl w-full max-w-lg p-8">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">My To-Do List</h1>
+
+    <!-- Input Field -->
+    <div class="flex mb-4">
+      <input id="taskInput" type="text" placeholder="Add a new task..." class="flex-1 p-3 border border-gray-300 rounded-l-xl focus:outline-none focus:ring-2 focus:ring-purple-400">
+      <button id="addBtn" class="bg-purple-500 text-white px-5 rounded-r-xl hover:bg-purple-600 transition">Add</button>
+    </div>
+
+    <!-- Filter Options -->
+    <div class="flex justify-between mb-4 text-gray-700">
+      <button class="filter-btn px-2 py-1 rounded hover:bg-purple-100 transition" data-filter="all">All</button>
+      <button class="filter-btn px-2 py-1 rounded hover:bg-purple-100 transition" data-filter="active">Active</button>
+      <button class="filter-btn px-2 py-1 rounded hover:bg-purple-100 transition" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- To-Do List -->
+    <ul id="todoList" class="space-y-2"></ul>
+
+    <!-- Clear Completed -->
+    <button id="clearCompleted" class="mt-4 w-full bg-red-500 text-white py-2 rounded-xl hover:bg-red-600 transition">Clear Completed</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

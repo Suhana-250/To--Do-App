@@ -1,0 +1,21 @@
+/* Custom Styles */
+.task-item {
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.task-item.dragging {
+  opacity: 0.6;
+  transform: scale(1.02);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 90, 213, 0.7);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
